@@ -1,10 +1,10 @@
-const projects = [
+﻿const projects = [
   {
     number: "01",
     name: "Kizuna Rail",
     category: "FULL-STACK APPLICATION",
     description:
-      "A collaborative railway booking application developed using server-side JavaScript and a database.",
+      "A team-built railway booking application with trip browsing and booking workflows. My contributions have included ticket-class pagination, search and filtering, and booking-flow improvements.",
     technologies: ["Node.js", "Express", "MongoDB", "EJS"],
     url: "https://github.com/marthasibiya25/kizuna-rail-new-team-project",
   },
@@ -13,7 +13,7 @@ const projects = [
     name: "UniMarket",
     category: "COLLABORATIVE WEB APPLICATION",
     description:
-      "A marketplace concept designed to help university communities buy and sell items.",
+      "A collaborative marketplace application for university communities. My contributions have included work on the listings API and data-access layer.",
     technologies: ["TypeScript", "Next.js", "APIs"],
     url: "https://github.com/marthasibiya25/unimarket",
   },
@@ -22,7 +22,7 @@ const projects = [
     name: "Sacrament Meeting Planner",
     category: "WEB APPLICATION",
     description:
-      "A web development project focused on building a structured application with modern frontend technologies.",
+      "A Next.js and TypeScript application developed as part of my software development coursework, with a focus on structured application development.",
     technologies: ["Next.js", "TypeScript", "React"],
     url: "https://github.com/marthasibiya25/sacrament-meetings",
   },
@@ -31,7 +31,7 @@ const projects = [
     name: "Books Web Service",
     category: "BACKEND DEVELOPMENT",
     description:
-      "A JavaScript web service project. Detailed features will be documented after reviewing the implementation.",
+      "A JavaScript backend project exploring web-service development and API-driven application functionality.",
     technologies: ["JavaScript", "Web Services"],
     url: "https://github.com/marthasibiya25/books-web-service",
   },
@@ -40,6 +40,9 @@ const projects = [
 const skills = [
   "JavaScript",
   "TypeScript",
+  "Python",
+  "SQL",
+  "PostgreSQL",
   "HTML5",
   "CSS3",
   "React",
@@ -64,7 +67,7 @@ export default function Home() {
             <a href="#skills">Skills</a>
             <a href="#contact">Contact</a>
           </div>
-          <a className="nav-cta" href="#contact">Let&apos;s talk ?</a>
+          <a className="nav-cta" href="#contact">Let&apos;s talk</a>
         </nav>
       </header>
 
@@ -72,23 +75,23 @@ export default function Home() {
         <div className="hero-copy">
           <div className="availability">
             <span className="status-dot" />
-            OPEN TO OPPORTUNITIES
+            OPEN TO INTERNSHIPS, LEARNERSHIPS & JUNIOR ROLES
           </div>
           <p className="eyebrow">HELLO, I&apos;M MARTHA SIBIYA</p>
-          <h1>Learning today.<br /><span>Building</span> for<br />tomorrow.</h1>
+          <h1>Aspiring software<br /><span>developer</span>, ready<br />to contribute.</h1>
           <p className="hero-description">
             I&apos;m a Software Development student at BYU–Idaho,
             learning to turn ideas into useful web applications through
             code, creativity, and continuous growth.
           </p>
           <div className="hero-actions">
-            <a className="button button-primary" href="#projects">Explore my work ?</a>
-            <a className="button button-secondary" href="#about">Get to know me</a>
+            <a className="button button-primary" href="#projects">Explore my work</a>
+            <a className="button button-secondary" href="#about">About me</a>
           </div>
           <div className="hero-socials">
-            <a href="https://github.com/marthasibiya25" target="_blank" rel="noreferrer">GitHub ?</a>
+            <a href="https://github.com/marthasibiya25" target="_blank" rel="noreferrer">GitHub</a>
             <span>/</span>
-            <a href="mailto:marthasibiya25@gmail.com">Email ?</a>
+            <a href="mailto:marthasibiya25@gmail.com">Email</a>
           </div>
         </div>
 
@@ -117,7 +120,7 @@ export default function Home() {
             <span><strong>Curious mind</strong><small>Always learning</small></span>
           </div>
           <div className="floating-chip chip-bottom">
-            <span className="chip-icon">?</span>
+            <span className="chip-icon">{"{}"}</span>
             <span><strong>Built with purpose</strong><small>Growing through code</small></span>
           </div>
         </div>
@@ -138,14 +141,12 @@ export default function Home() {
               projects and problem-solving.
             </p>
             <p>
-              I enjoy exploring how applications work, collaborating with
-              other developers, and improving my code. My goal is to create
-              reliable, thoughtful, and useful software.
+              I enjoy working with other developers, investigating issues, and improving my code through feedback and testing. I&apos;m looking for an opportunity to contribute to a development team, strengthen my skills, and help build reliable, useful software.
             </p>
             <a className="text-link" href="#contact">Let&apos;s connect ?</a>
           </div>
           <div className="about-highlight">
-            <span className="highlight-symbol">?</span>
+            <span className="highlight-symbol">{"{}"}</span>
             <p className="highlight-label">MY APPROACH</p>
             <h3>Stay curious.<br />Keep building.<br /><span>Never stop growing.</span></h3>
             <p className="highlight-note">Every project is a chance to learn something new.</p>
@@ -160,14 +161,14 @@ export default function Home() {
               <p className="eyebrow">02 / SELECTED WORK</p>
               <h2>Projects that show<br /><span>my progress.</span></h2>
             </div>
-            <a className="text-link" href="https://github.com/marthasibiya25?tab=repositories" target="_blank" rel="noreferrer">All repositories ?</a>
+            <a className="text-link" href="https://github.com/marthasibiya25?tab=repositories" target="_blank" rel="noreferrer">View all repositories</a>
           </div>
           <div className="project-grid">
             {projects.map((project) => (
               <article className="project-card" key={project.number}>
                 <div className="project-card-top">
                   <span className="project-number">{project.number}</span>
-                  <a className="project-arrow" href={project.url} target="_blank" rel="noreferrer" aria-label={`View ${project.name} on GitHub`}>?</a>
+                  <a className="project-arrow" href={project.url} target="_blank" rel="noreferrer" aria-label={`View ${project.name} on GitHub`}>&rarr;</a>
                 </div>
                 <p className="project-category">{project.category}</p>
                 <h3>{project.name}</h3>
@@ -175,11 +176,11 @@ export default function Home() {
                 <div className="project-stack">
                   {project.technologies.map((technology) => <span key={technology}>{technology}</span>)}
                 </div>
-                <a className="project-link" href={project.url} target="_blank" rel="noreferrer">Explore project ?</a>
+                <a className="project-link" href={project.url} target="_blank" rel="noreferrer">View project on GitHub</a>
               </article>
             ))}
           </div>
-          <p className="project-disclaimer">Project descriptions will be refined against the code and your individual contributions before publication.</p>
+
         </div>
       </section>
 
@@ -194,7 +195,7 @@ export default function Home() {
             <div className="skill-item" key={skill}>
               <span className="skill-index">{String(index + 1).padStart(2, "0")}</span>
               <span>{skill}</span>
-              <span className="skill-spark">?</span>
+              <span className="skill-spark">+</span>
             </div>
           ))}
         </div>
@@ -205,13 +206,13 @@ export default function Home() {
           <p className="eyebrow">04 / WHAT&apos;S NEXT?</p>
           <h2>Let&apos;s build<br /><span>something meaningful.</span></h2>
           <p className="contact-description">
-            I&apos;m eager to learn, grow, and explore opportunities where I
-            can contribute, collaborate, and develop my skills.
+            I&apos;m actively seeking software development internships, learnerships, graduate programmes, and junior roles where I can contribute, learn from experienced developers, and grow professionally.
           </p>
-          <a className="button button-primary contact-button" href="mailto:marthasibiya25@gmail.com?subject=Let%27s%20Connect">Get in touch ?</a>
+          <a className="button button-primary contact-button" href="mailto:marthasibiya25@gmail.com?subject=Let%27s%20Connect">Contact me</a>
           <div className="contact-bottom">
             <a href="mailto:marthasibiya25@gmail.com">marthasibiya25@gmail.com</a>
-            <a href="https://github.com/marthasibiya25" target="_blank" rel="noreferrer">GitHub ?</a>
+            <a href="tel:+27658767672">+27 65 876 7672</a>
+            <a href="https://github.com/marthasibiya25" target="_blank" rel="noreferrer">GitHub</a>
           </div>
         </div>
       </section>
